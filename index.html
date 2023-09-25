@@ -8,22 +8,22 @@
 </head>
 <body class="bg-gradient-to-b from-teal-900 to-gray-300">
     <div class="container mx-auto p-8 max-w-screen-md bg-white rounded-xl shadow-xl">
-        <div class="front p-4 bg-gradient-to-r h-96 mb-16 from-gray-800 to-gray-800 rounded-xl shadow-lg">
+        <div id="front" class="front p-4 bg-gradient-to-r h-96  from-gray-800 to-gray-800 rounded-xl shadow-lg">
             <div class="image flex justify-between items-center">
                 <img src="chip.png"/>
                 <img src="visa.png"/>
             </div>
 
-            <div class="mt-12 text-white font-semibold text-3xl my-4">#######################
+            <div  id="cart-number-box" class="mt-12 text-white font-semibold text-3xl my-4">#######################
             </div>
             <div class="flex flex-wrap justify-between">
                 <div class="box-content">
                     <div class="text-white text-2xl">Name Surname</div>
-                    <div class="text-white text-sm">Name Surname</div>
+                    <div id="cart-holder-name" class="text-white text-sm">Name Surname</div>
                     <div class="text-white text-2xl mt-6">DATE</div>
                     <div class="">
-                        <span class="text-white text-sm">MM</span>
-                        <span class="text-white text-sm" >YY</span>
+                        <span id="exp-month" class="text-white text-sm">MM</span>
+                        <span id="exp-year" class="text-white text-sm" >YY</span>
                     </div>
 
                 </div>
@@ -33,12 +33,12 @@
 
         </div>
 
-        <div class="back p-4 bg-gradient-to-r h-96  from-gray-800 to-gray-800 rounded-xl shadow-lg ">
+        <div id="back" style="display: none;" class="back p-4 bg-gradient-to-r h-96  from-gray-800 to-gray-800 rounded-xl shadow-lg ">
 
             <div class="h-8 bg-black w-full mt-4"></div>
             <div class="box mt-4">
                 <span class="text-white">CVV</span>
-                <div class="bg-white rounded-xl h-12 p-2 mt-2"></div>
+                <div id="cvv-box" class="bg-white rounded-xl h-12 p-2 mt-2"></div>
                 <img src="visa.png" class="mt-24"/>
             </div>
 
@@ -48,18 +48,18 @@
         <form>
             <div class="mt-8 mb-4">
                 <span class="text-gray-600">Cart Number</span>
-                <input type="text" maxlength="16" class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
+                <input type="text" id="cart-number-input" maxlength="16" class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
             </div>
 
             <div class="mt-4 mb-4">
                 <span class="text-gray-600">Name Surname</span>
-                <input type="text" class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
+                <input type="text" id="cart-holder-input" class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
             </div>
 
             <div class="mt-4 mb-4">
                 <span class="text-gray-600">Month</span>
               
-                <select class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
+                <select  id="month-input" class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
                     <option value="Month" selected disabled>MONTH</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
@@ -76,10 +76,10 @@
                 </select>
             </div>
 
-            <div class="mt-4 mb-4">
+            <div  class="mt-4 mb-4">
                 <span class="text-gray-600">Year</span>
-                <select class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
-                    <option value="Month" selected disabled>YEAR</option>
+                <select id="year-input" class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
+                    <option value="YEAR" selected disabled>YEAR</option>
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
                     <option value="2025">2025</option>
@@ -94,8 +94,8 @@
             </div>
 
             <div class="mt-4 mb-4">
-                <span class="text-gray-600">CV</span>
-                <input type="text" class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
+                <span class="text-gray-600">CVV</span>
+                <input id="cvv-input" type="text" class="bg-slate-600 text-lg text-white p-2 border rounded-xl w-full border-solid border-b-gray-950">
             </div>
 
             <div class="mt-4 mb-4">
@@ -109,7 +109,7 @@
         </form>
 
 
-
+<script src="script.js"></script>
 
     </div>
 
